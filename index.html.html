@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiooXBT | Web3 Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <style>
+    body {
+      background: black;
+      overflow-x: hidden;
+    }
+
+    /* Animated gradient background */
+    .bg-animated {
+      background: linear-gradient(270deg, #0f172a, #1e3a8a, #6d28d9);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glow:hover {
+      box-shadow: 0 0 20px #6366f1;
+      transform: scale(1.08);
+      transition: 0.3s;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+
+  <!-- Hero Section with Particles -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-animated relative">
+    <div id="particles-js"></div>
+    <div class="content flex flex-col items-center" data-aos="fade-up">
+  
+  <div class="relative flex items-center justify-center mb-6">
+    
+    <!-- Foto -->
+    <img src="rio.jpeg" 
+      class="w-36 h-36 rounded-full border-4 border-purple-500 object-cover shadow-2xl hover:scale-110 transition duration-300 z-10">
+    
+    <!-- Ring Muter -->
+    <div class="absolute w-40 h-40 rounded-full border-2 border-purple-400 animate-spin opacity-50"></div>
+    
+    <!-- Ring Glow -->
+    <div class="absolute w-44 h-44 rounded-full border-2 border-blue-400 animate-ping opacity-20"></div>
+
+  </div>
+
+  <h1 class="text-5xl font-bold mb-4">RiooXBT</h1>
+  <p class="text-xl text-gray-300">Web3 Builder | Crypto Enthusiast | Airdrop Hunter</p>
+
+</div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+    <p class="text-gray-400">
+      I am a Web3 enthusiast passionate about exploring blockchain technology, crypto ecosystems, and airdrop opportunities. I continuously learn and experiment with new protocols and decentralized applications.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-16 bg-gray-900 px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Skills</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="p-6 border border-gray-700 rounded-xl glow">Blockchain Basics</div>
+      <div class="p-6 border border-gray-700 rounded-xl glow">Smart Contracts (Basic)</div>
+      <div class="p-6 border border-gray-700 rounded-xl glow">Airdrop Hunter</div>
+      <div class="p-6 border border-gray-700 rounded-xl glow">Crypto Research</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-16 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Projects & Experience</h2>
+    <ul class="space-y-4 text-gray-400">
+      <li>• Deployed smart contracts on Base</li>
+      <li>• Participated in airdrops</li>
+      <li>• Explored multiple blockchain testnets</li>
+    </ul>
+  </section>
+
+
+  <footer class="text-center py-6 text-gray-600 text-sm">
+    © 2026 RiooXBT - Web3 Portfolio
+  </footer>
+
+  <script>
+    // Init AOS
+    AOS.init({ duration: 1000, once: true });
+
+    // Particles config
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#6366f1" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
