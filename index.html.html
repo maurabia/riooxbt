@@ -6,20 +6,16 @@
   <title>RiooXBT | Web3 Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animation Library -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Particles.js -->
+  <!-- Particles -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
   <style>
-    body {
-      background: black;
-      overflow-x: hidden;
-    }
+    body { background: black; overflow-x: hidden; }
 
-    /* Animated gradient background */
     .bg-animated {
       background: linear-gradient(270deg, #0f172a, #1e3a8a, #6d28d9);
       background-size: 600% 600%;
@@ -32,107 +28,113 @@
       100% { background-position: 0% 50%; }
     }
 
-    .glow:hover {
-      box-shadow: 0 0 20px #6366f1;
-      transform: scale(1.08);
-      transition: 0.3s;
-    }
-
     #particles-js {
       position: absolute;
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
+    .content { position: relative; z-index: 1; }
+
+    .card {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
     }
   </style>
 </head>
 <body class="text-white font-sans">
 
-  <!-- Hero Section with Particles -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-animated relative">
-    <div id="particles-js"></div>
-    <div class="content flex flex-col items-center" data-aos="fade-up">
-  
-  <div class="relative flex items-center justify-center mb-6">
-    
-    <!-- Foto -->
-    <img src="rio.jpeg" 
-      class="w-36 h-36 rounded-full border-4 border-purple-500 object-cover shadow-2xl hover:scale-110 transition duration-300 z-10">
-    
-    <!-- Ring Muter -->
-    <div class="absolute w-40 h-40 rounded-full border-2 border-purple-400 animate-spin opacity-50"></div>
-    
-    <!-- Ring Glow -->
-    <div class="absolute w-44 h-44 rounded-full border-2 border-blue-400 animate-ping opacity-20"></div>
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center bg-animated relative">
+  <div id="particles-js"></div>
+
+  <div class="content flex flex-col items-center" data-aos="fade-up">
+
+    <div class="relative flex items-center justify-center mb-6">
+      <img src="rio.jpeg" class="w-36 h-36 rounded-full border-4 border-purple-500 object-cover shadow-2xl hover:scale-110 transition duration-300 z-10">
+      <div class="absolute w-40 h-40 rounded-full border-2 border-purple-400 animate-spin opacity-50"></div>
+      <div class="absolute w-44 h-44 rounded-full border-2 border-blue-400 animate-ping opacity-20"></div>
+    </div>
+
+    <h1 class="text-5xl font-bold mb-4">RiooXBT</h1>
+    <p class="text-xl text-gray-300">Web3 Builder & Contributors | Airdrop Hunter | Testnet Explorer</p>
+
+    <!-- SOCIAL BUTTON -->
+    <div class="flex gap-4 mt-6">
+  <a href="https://twitter.com/riooxbt" target="_blank"
+     class="flex items-center gap-2 px-4 py-2 border border-purple-500 rounded-lg hover:bg-purple-600 transition">
+     <!-- Twitter Icon -->
+     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+       <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.3 3.9A12.15 12.15 0 0 1 3.15 4.6a4.28 4.28 0 0 0 1.32 5.71 4.22 4.22 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54 12.13 12.13 0 0 0 8.56 21c7.87 0 12.17-6.52 12.17-12.17 0-.19 0-.39-.01-.58A8.7 8.7 0 0 0 22.46 6z"/>
+     </svg>
+     Twitter
+  </a>
+
+  <a href="https://t.me/riooxbt" target="_blank"
+     class="flex items-center gap-2 px-4 py-2 border border-purple-500 rounded-lg hover:bg-purple-600 transition">
+     <!-- Telegram Icon -->
+     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+       <path d="M9.04 15.54l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.44 5.28 3.87c.97.53 1.66.25 1.9-.9l3.45-16.2c.32-1.48-.54-2.06-1.5-1.7L1.5 9.26c-1.44.56-1.42 1.37-.25 1.73l5.6 1.75 13-8.2c.61-.4 1.17-.18.71.22"/>
+     </svg>
+     Telegram
+  </a>
+</div>
 
   </div>
+</section>
 
-  <h1 class="text-5xl font-bold mb-4">RiooXBT</h1>
-  <p class="text-xl text-gray-300">Web3 Builder | Crypto Enthusiast | Airdrop Hunter</p>
+<!-- STATS -->
+<section class="py-16 text-center" data-aos="fade-up">
+  <div class="grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+    <div><h3 class="text-3xl font-bold">20+</h3><p class="text-gray-400">Airdrops</p></div>
+    <div><h3 class="text-3xl font-bold">10+</h3><p class="text-gray-400">Testnets</p></div>
+    <div><h3 class="text-3xl font-bold">5+</h3><p class="text-gray-400">Contracts</p></div>
+  </div>
+</section>
 
-</div>
-  </section>
+<!-- ABOUT -->
+<section class="py-16 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+  <p class="text-gray-400">
+    Web3 enthusiast focused on airdrop strategies, blockchain exploration, and smart contract experimentation. Actively participating in early-stage ecosystems and testnets.
+  </p>
+</section>
 
-  <!-- About -->
-  <section class="py-16 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-    <p class="text-gray-400">
-      I am a Web3 enthusiast passionate about exploring blockchain technology, crypto ecosystems, and airdrop opportunities. I continuously learn and experiment with new protocols and decentralized applications.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section class="py-16 bg-gray-900 px-6" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold text-center mb-10">Skills</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      <div class="p-6 border border-gray-700 rounded-xl glow">Blockchain Basics</div>
-      <div class="p-6 border border-gray-700 rounded-xl glow">Smart Contracts (Basic)</div>
-      <div class="p-6 border border-gray-700 rounded-xl glow">Airdrop Hunter</div>
-      <div class="p-6 border border-gray-700 rounded-xl glow">Crypto Research</div>
+<!-- PROJECTS -->
+<section class="py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card p-6 rounded-xl border border-gray-700">
+      <h3 class="text-xl font-bold">Basic Smart Contract</h3>
+      <p class="text-gray-400">Deployed ERC20 Contract.</p>
     </div>
-  </section>
+    <div class="card p-6 rounded-xl border border-gray-700">
+      <h3 class="text-xl font-bold">Airdrop Hunter</h3>
+      <p class="text-gray-400">Research all ecosystems.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section class="py-16 px-6 max-w-5xl mx-auto" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold text-center mb-10">Projects & Experience</h2>
-    <ul class="space-y-4 text-gray-400">
-      <li>• Deployed smart contracts on Base</li>
-      <li>• Participated in airdrops</li>
-      <li>• Explored multiple blockchain testnets</li>
-    </ul>
-  </section>
+<footer class="text-center py-6 text-gray-600 text-sm">
+  © 2026 RiooXBT - Web3 Portfolio
+</footer>
 
+<script>
+  AOS.init({ duration: 1000, once: true });
 
-  <footer class="text-center py-6 text-gray-600 text-sm">
-    © 2026 RiooXBT - Web3 Portfolio
-  </footer>
-
-  <script>
-    // Init AOS
-    AOS.init({ duration: 1000, once: true });
-
-    // Particles config
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80 },
-        color: { value: "#6366f1" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        move: { enable: true, speed: 2 }
-      },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "repulse" }
-        }
-      }
-    });
-  </script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#6366f1" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 2 }
+    }
+  });
+</script>
 
 </body>
 </html>
